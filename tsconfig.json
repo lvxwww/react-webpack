@@ -1,0 +1,23 @@
+//tsconfig.json 推荐配置
+{
+    "compilerOptions": {
+        "outDir": "./dist", //webpack的output配置了,这里不写也可
+        "module": "es6", //以es6的方式引入 import
+        "target": "es5", //打包成es5
+        "jsx": "react", // jsx编译器指定react
+        "allowJs": true, //允许ts里面引入js模块
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"]
+        }
+    },
+    "exclude": [
+        "node_modules" //排除
+    ],
+    "include": [
+        "src", //只在src生效
+        "typings.d.ts"
+    ]
+}
